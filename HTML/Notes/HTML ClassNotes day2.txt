@@ -1,0 +1,449 @@
+ 
+
+The HTML <div> tag is used to group the large section of HTML elements together.
+
+We know that every tag has a specific purpose e.g. p tag is used to specify paragraph, <h1> to <h6> tag are used to specify headings but the <div> tag is just like a container unit which is used to encapsulate other page elements and divides the HTML documents into sections.
+
+The div tag is generally used by web developers to group HTML elements together and apply CSS styles to many elements at once. For example: If you wrap a set of paragraph elements into a div element so you can take the advantage of CSS styles and apply font style to all paragraphs at once instead of coding the same style for each paragraph element.
+
+<div style="border:1px solid pink;padding:20px;font-size:20px">  
+<p>Welcome to CSSCorp  Here you get training  on fullstack technologies.</p>  
+<p>This is second paragraph</p>  
+</div>  
+
+Difference between HTML div tag and span tag
+ 
+HTML div is a block element.	HTML span is an inline element
+HTML div element is used to wrap large sections of elements.	HTML span element is used to wrap small portion of texts, image etc.
+
+HTML Color Styles
+ 
+
+What do you mean by Colors?
+Colors are used to enhance the web pages. The use of different colors schemes makes web pages more attractive.
+
+Following the different color styles can be used to create new colors by combining different colors.
+
+1. Hexadecimal Style:
+In this style, we define the color in 6 digit hexadecimal numbers (from 0 to F). It is denoted by '#'.
+yntax:
+
+#RRGGBB  
+In the above syntax, the first two digits indicate a red color, the next two digits indicate a green color, and the last two digits indicate a blue color.
+
+For example: #ff00ff
+
+In the above example, ff is displayed as red, 00 is displayed as green, and the ff is displayed as blue.
+2. RGB Style:
+It stands Red, Green, and Blue. In this, the range of each color is from 0 to 255.
+
+RGBA Style:
+It stands Red, Green, Blue, and Alpha. It is an extension of RGB style. In this style, the 4th parameter, alpha, indicates the degree of transparency. In this, the range of green, blue and red is from 0 to 255, and the range of alpha is 0 to 1. With this, we can make the color transparent according to desire.
+
+HSL Style:
+This style is the image's color.
+hsl(hue, saturation, lightness)  
+H: In the above syntax, H stands for Hue. The range of hue is 0 to 360. In this range, 0 value is used for red, 120 value is for green, and 240 value is used for blue.
+S: In the above syntax, S stands for Saturation. It describes the intensity of the color. In this, 0% is used for a shade of gray, and 100% is the full color. 50 % also defines the grey color, but we can still see the color with the use of this.
+L: In the above syntax, L stands for Lightness of the color. It defines the color brightness. 0% is used for black, 100% is used for white, and 50% means neither black nor white.
+
+HTML 5 Tags
+There is a list of newly included tags in HTML 5. These HTML 5 tags (elements) provide a better document structure. This list shows all HTML 5 tags in alphabetical order with description.
+List of HTML 5 Tags
+Tag	Description
+<article>	This element is used to define an independent piece of content in a document, that may be a blog, a magazine or a newspaper article.
+<aside>	It specifies that article is slightly related to the rest of the whole page.
+<audio>	It is used to play audio file in HTML.
+<bdi>	The bdi stands for bi-directional isolation. It isolates a part of text that is formatted in other direction from the outside text document.
+<canvas>	It is used to draw canvas.
+<data>	It provides machine readable version of its data.
+<datalist>	It provides auto complete feature for textfield.
+HTML Datalist Tag
+The HTML <datalist> tag is is used to provide an auto complete feature on form element. It provides a list of predefined options to the users to select data.
+
+The datalist tag is introduced in HTML5.
+
+The <datalist> tag should be used with an <input< element that contains a "list" attribute. The value of "list" attribute is linked with the datalist id.
+
+The HTML datalist tag supports global and event attributes also.
+HTML datalist tag example
+Let's see the simple example of HTML5 datalist tag. If you press A, it will show a list of cricketers starting with A letter.
+<label>  
+ Enter your favorite cricket player: Press any character<br />  
+ <input type="text" id="favCktPlayer" list="CktPlayers">  
+ <datalist id="CktPlayers">  
+ <option value="Sachin Tendulkar">  
+ <option value="Brian Lara">  
+ <option value="Jacques Kallis">   
+ <option value="Ricky Ponting">   
+ <option value="Rahul Dravid">   
+ <option value="Shane Warne">   
+ <option value="Rohit Sharma">   
+ <option value="Donald Bradman">   
+ <option value="Saurav Ganguly ">   
+ <option value="AB diVilliers">   
+ <option value="Mahendra Singh Dhoni">   
+ <option value="Adam Gilchrist">  
+ </datalist>  
+</label>  
+
+<details>	It specifies the additional information or controls required by user.
+
+HTML Details Tag
+HTML <details> tag is used to specify the additional details on the web page that the user can view or hide on demand.
+
+According to W3C HTML specification, it is used as a disclosure widget from which user can retrieve additional information or control.
+
+It is used together with a relevant tag known as <summary>. Technically, there is no need of summary tag, but if you ignore this then the browser will use some default text.
+
+The <details> tag wraps all the content which you want to show or hide and the <summary> tag contains the summary and the title of the section.
+
+<details>  
+<summary>Copyright 2011-2022.</summary>  
+<p> - by CSS Corp All Rights Reserved.</p>  
+<p>All content and graphics on this web site are the property of the  CSSCorp.com</p>  
+</details>  
+<p><b>Note:</b> The details tag is currently only supported in Opera, Chrome, and in Safari 6.</p>  
+
+<dialog>	It defines a window or a dialog box.
+
+HTML <dialog> tag is used to create a new popup dialog on a web page. This tag represents a dialog box or other interactive component like window.
+
+The <dialog> element uses a boolean attribute called open that activate element and facilitate user to interact with it.
+
+HTML dialog is a new tag introduced in HTML5.
+
+HTML dialog tag example
+<div>  
+<dialog id="myFirstDialog" style="width:50%;background-color:#F4FFEF;border:1px dotted black;">  
+<p><q>I am so clever that sometimes I don't understand a single word of what I am saying.   
+</q> - <cite>Oscar Wilde</cite></p>  
+<button id="hide">Close</button>  
+</dialog>  
+<button id="show">Show Dialog</button>  
+</div>  
+  
+<!-- JavaScript to provide the "Show/Close" functionality -->  
+<script type="text/JavaScript">  
+(function() {    
+    var dialog = document.getElementById('myFirstDialog');    
+    document.getElementById('show').onclick = function() {    
+        dialog.show();    
+    };    
+    document.getElementById('hide').onclick = function() {    
+        dialog.close();    
+    };    
+})();   
+</script>  
+<figcaption>	It is used to define a caption for a <figure> element.
+The <figcaption> element is used to provide a caption to an image.
+
+It is an optional tag and can appear before or after the content within the <figure> tag.
+
+Only one <figcaption> element can be nested within a <figure> tag although the <figure> element itself may contain multiple other elements like <img> or <code>.
+
+The <figcaption> element is used with <figure> element and it can be placed as the first or last child of the <figure> element.
+
+<figure>  
+  <img src=" tajmahal.jpg" alt="Taj Mahal"/>  
+<figcaption>Fig.1.1 - A front view of the great Taj Mahal in Agra.</figcaption>  
+</figure>  
+<figure>	It defines a self-contained content like photos, diagrams etc.
+
+
+<footer>	It defines a footer for a section.
+
+HTML Footer Tag
+HTML <footer> tag is used to define a footer for a document or a section. It is generally used in the last of the section (bottom of the page).
+
+The footer tag is included in HTML5.
+
+HTML <footer> tag contains information about its containing elements for example:
+
+
+author information
+contact information
+copyright information
+sitemap
+back to top links
+related documents etc.
+
+<footer>  
+<p>Posted by: Sunil</p>  
+<p>   
+<address>  Chennai Pincode 600058 
+</address>   
+</p>  
+<p>Contact information:   
+<a href="mailto:sunil@gmail.com"> sunl@gmail.com</a>.  
+</p>  
+</footer> 
+<header>	It defines a header for a section.
+
+HTML Header Tag
+HTML <header> tag is used as a container of introductory content or navigation links. Generally a <header> element contains one or more heading elements, logo or icons or author's information.
+
+You can use several <header> elements in one document, but a <header> element cannot be placed within a <footer>, <address> or another <header> element.
+header{  
+border: 1px solid pink;  
+background-color:pink;  
+padding:10px;  
+border-radius:5px;  
+}  
+<header>  
+<h2>Amazon.com</h2>  
+<p> World's no.1 shopping website</p>  
+</header>  
+<main>	It defines the main content of a document.
+HTML Main Tag
+HTML <main> tag is used to represent the main content of the <body> tag.
+
+The <main> tag is written within <body> tag. It is used to accurately describe the primary content of a page.
+
+The content of the main tag is directly related to the central topic of the document.
+
+HTML <main> is a new tag and introduced in HTML5.
+Points to remember:
+Author should not include more than one <main> tag within a document.
+
+The <main> element should not used as a child of an <article>, <aside>, <header>, <footer>, or <nav> element.
+
+HTML main tag and its sub elements can be easily styled by CSS.
+
+<main>  
+ <h2>Apples</h1>  
+ <p>The apple is a red color pomaceous fruit of the apple tree. It is a very famous saying about apple.  
+  </br> "An apple in a day, keeps the Doctor away".</p>  
+ <article>  
+  <h3>Red Delicious</h3>  
+  <p>These bright red apples are the most common found in many supermarkets.</p>  
+ </article>  
+ <article>  
+ <h3>Granny Smith</h3>  
+ <p>These juicy, green apples make a great filling for apple pies.</p>  
+ </article>  
+</main>  
+<mark>	It specifies the marked or highlighted content.
+<menuitem>	It defines a command that the user can invoke from a popup menu.
+<meter>	It is used to measure the scalar value within a given range.
+<nav>	It is used to define the navigation link in the document.
+<progress>	It specifies the progress of the task.
+<rp>	It defines what to show in browser that don't support ruby annotation.
+<rt>	It defines an explanation/pronunciation of characters.
+<ruby>	It defines ruby annotation along with <rp> and <rt>.
+<section>	It defines a section in the document.
+<summary>	It specifies a visible heading for <detailed> element.
+<svg>	It is used to display shapes.
+<time>	It is used to define a date/time.
+<video>	It is used to play video file in HTML.
+<wbr>	It defines a possible line break.
+
+
+HTML <!DOCTYPE> tag
+On the HTML document you have often seen that there is a <!DOCTYPE html> declaration before the <html> tag. HTML <!DOCTYPE> tag is used to inform the browser about the version of HTML used in the document. It is called as the document type declaration (DTD).
+
+Technically <!DOCTYPE > is not a tag/element, it just an instruction to the browser about the document type. It is a null element which does not contain the closing tag, and must not include any content within it.
+
+Actually, there are many type of HTML e.g. HTML 4.01 Strict, HTML 4.01 Transitional, HTML 4.01 Frameset, XHTML 1.0 Strict, XHTML 1.0 Transitional, XHTML 1.0 Frameset, XHTML 1.1 etc.
+
+The <!DOCTYPE> declaration refers Document Type Declaration (DTD) in HTML 4.01; because HTML 4.01 was based on SGML. But HTML 5 is not SGML based language.
+
+
+HTML Time Tag
+HTML <time> tag is used to define date and time. It displays time value in a 24 hour clock or a precise date in a Gregorian calendar in HTML.
+
+It is used to encode dates and times in a machine-readable way to make easy to mark or schedule your task.
+
+It also helps search engines to produce smarter search results.
+
+HTML <time> is a new tag and introduced in HTML5.
+<p>We open our shop at <time>09:00</time> am.</p>  
+<p>The business meeting is scheduled on <time datetime="2009-02-18">next wednesday</time>.</p>  
+<p>The wedding  scheduled  at <time datetime="2022-11-19 T0 7:00-09:00">7pm last wednesday </time>.</p>
+
+HTML <abbr> tag is used to represent an acronym or abbreviation of a longer word or phrase, such as www, HTML, HTTP, etc. The content written between <abbr> tags renders with dotted underline in some browser.
+
+Although <acronym> tag is not supported by HTML5 but instead of that we can use <abbr> tag and we will get the same result using both tag.
+This tag can be used with "title" attribute (optional), and the value of title attribute will be pop-up when the mouse hovers over the content written between <abbr> tag.
+
+<!DOCTYPE html>  
+<html>  
+  <head>  
+    <title>Abbreviation Tag</title>  
+   </head>  
+ <body>  
+    <h2>Abbreviation tag example</h2>  
+    <p><b>Hover mouse over the content and see the abbreviation</b></p>  
+               <abbr title="Hyper Text Transfer protocol">HTTP</abbr>  
+    </body>  
+</html>    
+
+
+HTML Article Tag
+The HTML <article> tag defines an independent self-contained content in a document, page, application or a site.
+
+The article tag content makes sense on its own. It is independent and complete from other content shown on the page. This tag is generally used on Forum post, Blog post, News story, comment etc.
+
+<article>  
+ <h2>Block Chain</h2>  
+  <i>Artificial Intelligence </i>  
+  <p> These 2 new technologies are the latest and provides a lot of opportunities to the youngsters. </p>  
+</article>   
+
+HTML Aside Tag
+The HTML <aside> tag provides information about the main content. According to W3C definition, the <aside> element represents content that forms the main textual flow of a document.
+
+HTML aside is a new tag introduced in HTML5.
+
+<p>I don't want to live in Ghaziabad, I wish; I could buy a flat in New Delhi.</p>  
+<aside>  
+  <h3>New Delhi</h3>  
+  <p>New Delhi is the capital of India.</p>  
+</aside>  
+
+HTML Audio Tag
+HTML audio tag is used to define sounds such as music and other audio clips. Currently there are three supported file format for HTML 5 audio tag.
+
+mp3
+wav
+ogg
+HTML5 supports <video> and <audio> controls. The Flash, Silverlight and similar technologies are used to play the multimedia items.
+
+<audio controls>  
+  <source src="koyal.mp3" type="audio/mpeg">  
+Your browser does not support the html audio tag.  
+</audio>  
+
+Attribute	Description
+controls	It defines the audio controls which is displayed with play/pause buttons.
+autoplay	It specifies that the audio will start playing as soon as it is ready.
+loop	It specifies that the audio file will start over again, every time when it is completed.
+muted	It is used to mute the audio output.
+preload	It specifies the author view to upload audio file when the page loads.
+src	It specifies the source URL of the audio file.
+
+
+HTML Video Tag
+HTML 5 supports <video> tag also. The HTML video tag is used for streaming video files such as a movie clip, song clip on the web page.
+
+Currently, there are three video formats supported for HTML video tag:
+
+mp4
+webM
+ogg
+
+video width="320" height="240" controls autoplay loop>  
+  <source src="movie.mp4" type="video/mp4">  
+  Your browser does not support the html video tag.  
+</video>  
+
+
+The HTML SVG is an acronym which stands for Scalable Vector Graphics.
+
+HTML SVG is a modularized language which is used to describe graphics in XML. It describe two-dimensional vector and mixed vector/raster graphics in XML. It is a W3C recommendation. SVG images and their behaviors are defined in XML text files. So as XML files, you can create and edit an SVG image with text editor, but generally drawing programs like inkspace are preferred to create it.
+
+SVG is mostly used for vector type diagrams like pie charts, 2-Dimensional graphs in an X,Y coordinate system etc.
+
+The <svg> element specifies the root of a SVG fragment. You can animate every element and every attribute in SVG files
+
+<svg height="210" width="500">  
+  <polygon points="100,10 40,198 190,78 10,78 160,198"  
+  style="fill:red;stroke:yellow;stroke-width:5;fill-rule:nonzero;" />  
+</svg>  
+Here, we are using points attribute of polygon tag.
+ 
+Why SVG is preferred over other image formats?
+SVG images can be saved as the smallest size possible. Unlike bitmap image formats like JPG or PNG, it does not contain a fixed set of dots. So it is also easy to print with high quality at any resolution.
+
+SVG images can be zoomed to a certain level without degradation of the picture quality.
+
+SVG images and their behaviors are defined in XML text files, so they can be created and edited with any text editor.
+
+HTML Canvas Tag
+The HTML canvas element provides HTML a bitmapped surface to work with. It is used to draw graphics on the web page.
+
+The HTML 5 <canvas> tag is used to draw graphics using scripting language like JavaScript.
+
+The <canvas> element is only a container for graphics, you must need a scripting language to draw the graphics. The <canvas> element allows for dynamic and scriptable rendering of 2D shapes and bitmap images.
+
+It is a low level, procedural model that updates a bitmap and does not have a built-in scene. There are several methods in canvas to draw paths, boxes, circles, text and add images.
+
+How to create a HTML canvas?
+A canvas is a rectangle like area on an HTML page. It is specified with canvas element. By default, the <canvas> element has no border and no content, it is like a container.
+ <canvas id="myCanvas1" width="300" height="100" style="border:2px solid;">  
+Your browser does not support the HTML5 canvas tag.  
+</canvas>  
+Note: It is always necessary to specify the id attribute and the height & width attribute to define the size of the canvas. You can have multiple canvas elements on one HTML page.
+
+
+HTML Drag and Drop
+HTML Drag and Drop (DnD) is a feature of HTML5. It is a powerful user interface concept which is used to copy, reorder and delete items with the help of mouse. You can hold the mouse button down over an element and drag it to another location. If you want to drop the element there, just release the mouse button.
+
+If you want to achieve the Drag and Drop functionality in traditional HTML4, you must either have to use complex JavaScript programming or other JavaScript frameworks like jQuery etc.
+
+HTML Drag and Drop
+HTML Drag and Drop (DnD) is a feature of HTML5. It is a powerful user interface concept which is used to copy, reorder and delete items with the help of mouse. You can hold the mouse button down over an element and drag it to another location. If you want to drop the element there, just release the mouse button.
+
+If you want to achieve the Drag and Drop functionality in traditional HTML4, you must either have to use complex JavaScript programming or other JavaScript frameworks like jQuery etc.
+
+Events for Drag and Drop feature
+Event	Description
+Drag	It fires every time when the mouse is moved while the object is being dragged.
+Dragstart	It is a very initial stage. It fires when the user starts dragging object.
+Dragenter	It fires when the user moves his/her mouse cursur over the target element.
+Dragover	This event is fired when the mouse moves over an element.
+Dragleave	This event is fired when the mouse leaves an element.
+Drop	Drop It fires at the end of the drag operation.
+Dragend	It fires when user releases the mouse button to complete the drag operation.
+HTML5 Drag and Drop Example (we will see this when we are doing JS)
+ 
+
+HTML <bdi> tag
+HTML <bdi> tag stands for Bidirectional Isolate Element. It is used to inform the browser to isolate the span of text which may be formatted in opposite directions than the surrounding text.
+
+This tag is new in HTML5 and useful for languages such as Arabic or Hebrew, or if the browser dynamically inserts some text without knowing the directionality of text.
+
+Note: The directionality of content inside <bdi> does not influence by the directionality of surrounding content.
+Syntax
+<bdi>Content</bdi>  
+
+
+Difference between <bdi> and <bdo>
+HTML <bdi> tag is new element of HTML5 and it is very similar to HTML <bdo> element. But the main difference in both the elements is that <bdi> tag isolates the content from its surrounding content but <bdo> tag reveres the direction. Sometimes <bdo> tag may cause some unexpected rendering errors so try to use <bdi> if required.
+
+HTML <ruby> tag
+HTML <ruby> tag is used to represent ruby annotations on the web page. Ruby annotations are useful if we want to show the pronunciation of East Asian characters like Chinese and Japanese Chinese.
+
+The <ruby> tag enclosed one or more <rt> elements which give the pronunciation of ruby annotations and displays above the annotation characters. It can also contain <rp> (optional) element which is used as a fall-back parenthesis for the browser which does not support the ruby annotation.
+
+HTML <ruby> tag can also be used to represent small annotation which is relevant to the main content, apart from East Asian language.
+
+The <ruby> tag is new in HTML5.
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>HTML ruby tag</title>  
+    <style>  
+    body{  
+        text-align: center;  
+    }  
+        rt{ font-size: 10px;  
+            color: green;  
+        }  
+    </style>  
+</head>  
+<body>  
+<h1>Example of ruby tag</h1>  
+<p>East Asian Langugae Annotation</p>  
+<ruby>  
+     大哥<rt>Big Brother</rt>  
+</ruby>  
+  
+<p>Noraml Annotaion Representation of Expiry date</p>  
+<ruby>  
+    2022<rp>(</rp><rt>Year</rt><rp>)</rp>  
+     12<rp>(</rp><rt> Month</rt><rp>)</rp>  
+    06<rp>(</rp><rt>Date</rt><rp>)</rp>  
+</ruby>  
+</body>  
+</html>  

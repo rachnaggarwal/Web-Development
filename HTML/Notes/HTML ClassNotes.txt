@@ -1,0 +1,921 @@
+
+
+
+
+//anchor tag
+The HTML anchor tag defines a hyperlink that links one page to another page. It can create hyperlink to other web page as well as files, location, or any URL. The "href" attribute is the most important attribute of the HTML a tag. and which links to destination page or URL.
+
+href attribute of HTML anchor tag
+The href attribute is used to define the address of the file to be linked. In other words, it points out the destination page.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title></title>  
+</head>  
+<body>  
+<p>Click on <a href="https://www.google.com/" target="_blank"> this-link </a>to go on home page of google.</p>  
+</body>  
+</html>
+===========================================================================================================================================  
+//img tag
+HTML img tag is used to display image on the web page. HTML img tag is an empty tag that contains attributes only, closing tags are not used in HTML image element.
+
+<h2>HTML Image Example</h2>  
+<img src=" .jpg" alt="Hello"/>  
+
+<img src="animal.jpg" height="180" width="300" alt="animal image"> 
+=============================================================================================================================================
+
+HTML table tag is used to display data in tabular form (row * column). There can be many columns in a row.
+
+We can create a table to display data in tabular form, using <table> element, with the help of <tr> , <td>, and <th> elements.
+
+In Each table, table row is defined by <tr> tag, table header is defined by <th>, and table data is defined by <td> tags.
+
+HTML tables are used to manage the layout of the page e.g. header section, navigation bar, body content, footer section etc. But it is recommended to use div tag over table to manage the layout of the page . & Tbody tag...
+
+!DOCTYPE html>  
+<html>  
+<head>  
+    <title>HTML tbody tag</title>  
+    <style>  
+        body{  
+        margin-left: 195px;"  
+        }  
+    </style>  
+</head>  
+<body>  
+ <h2>Example of the tbody tag</h2>  
+ <table border="1" bgcolor="#98f5ff">  
+   <thead>  
+       <tr>  
+        <th>EmpId</th>  
+        <th>Name</th>  
+        <th>Email-Id</th>     
+       </tr>  
+   </thead>  
+ <tbody>  
+      <tr>  
+        <td>121</td>  
+        <td>John</td>  
+        <td>john123@gmail.com</td>  
+      </tr>  
+  
+      <tr>  
+        <td>122</td>  
+        <td>William </td>  
+        <td>william56@gmail.com</td>  
+      </tr>  
+  
+      <tr>  
+        <td>123</td>  
+        <td>Amit</td>  
+        <td>amitk98@gmail.com</td>  
+      </tr>     
+   </tbody>  
+</table>  
+</body>  
+</html>  
+=============================================================================================================================
+
+
+HTML Lists are used to specify lists of information. All lists may contain one or more list elements. There are three different types of HTML lists:
+
+Ordered List or Numbered List (ol)
+Unordered List or Bulleted List (ul)
+Description List or Definition List (dl)
+
+In the ordered HTML lists, all the list items are marked with numbers by default. It is known as numbered list also. The ordered list starts with <ol> tag and the list items start with <li> tag.
+<ol>  
+ <li>Aries</li>  
+ <li>Bingo</li>  
+ <li>Leo</li>  
+ <li>Oracle</li>  
+</ol>  
+
+HTML Unordered List or Bulleted List
+In HTML Unordered list, all the list items are marked with bullets. It is also known as bulleted list also. The Unordered list starts with <ul> tag and list items start with the <li> tag.
+
+HTML Description List or Definition List
+HTML Description list is also a list style which is supported by HTML and XHTML. It is also known as definition list where entries are listed like a dictionary or encyclopedia.
+
+The definition list is very appropriate when you want to present glossary, list of terms or other name-value list.
+
+The HTML definition list contains following three tags:
+
+<dl> tag defines the start of the list.
+<dt> tag defines a term.
+<dd> tag defines the term definition (description).
+
+<dl>  
+  <dt>Aries</dt>  
+  <dd>-One of the 12 horoscope sign.</dd>  
+  <dt>Bingo</dt>  
+  <dd>-One of my evening snacks</dd>  
+ <dt>Leo</dt>  
+ <dd>-It is also an one of the 12 horoscope sign.</dd>  
+  <dt>Oracle</dt>  
+  <dd>-It is a multinational technology corporation.</dd>   
+</dl>  
+=============================================================================================================================================
+An HTML form is a section of a document which contains controls such as text fields, password fields, checkboxes, radio buttons, submit button, menus etc.
+
+An HTML form facilitates the user to enter data that is to be sent to the server for processing such as name, email address, password, phone number, etc. .
+
+
+Why use HTML Form
+HTML forms are required if you want to collect some data from of the site visitor.
+
+For example: If a user want to purchase some items on internet, he/she must fill the form such as shipping address and credit/debit card details so that item can be sent to the given address.
+
+<form action="server url" method="get|post">  
+  //input controls e.g. textfield, textarea, radiobutton, button  
+</form>  
+
+ HTML <input> element
+The HTML <input> element is fundamental form element. It is used to create form fields, to take input from user. We can apply different input filed to gather different information form user. Following is the example to show the simple text input.
+<body>  
+  <form>  
+     Enter your name  <br>  
+    <input type="text" name="username">  
+  </form>  
+</body>  
+
+HTML <textarea> tag in form
+The <textarea> tag in HTML is used to insert multiple-line text in a form. The size of <textarea> can be specify either using "rows" or "cols" attribute or by CSS.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Form in HTML</title>  
+</head>  
+<body>  
+  <form>  
+        Enter your address:<br>  
+      <textarea rows="2" cols="20"></textarea>  
+  </form>  
+</body>  
+</html>  
+Label Tag in Form
+It is considered better to have label in form. As it makes the code parser/browser/user friendly.
+
+If you click on the label tag, it will focus on the text control. To do so, you need to have for attribute in label tag that must be same as id attribute of input tag.
+
+form>  
+    <label for="firstname">First Name: </label> <br/>  
+              <input type="text" id="firstname" name="firstname"/> <br/>  
+   <label for="lastname">Last Name: </label>  
+              <input type="text" id="lastname" name="lastname"/> <br/>  
+ </form> 
+
+HTML Password Field Control 
+The password is not visible to the user in password field control.
+<form>  
+    <label for="password">Password: </label>  
+              <input type="password" id="password" name="password"/> <br/>  
+</form> 
+HTML 5 Email Field Control
+The email field in new in HTML 5. It validates the text for correct email address. You must use @ and . in this field.
+
+<form>  
+    <label for="email">Email: </label>  
+              <input type="email" id="email" name="email"/> <br/>  
+</form>  
+Radio Button Control
+The radio button is used to select one option from multiple options. It is used for selection of gender, quiz questions etc.
+
+If you use one name for all the radio buttons, only one radio button can be selected at a time.
+
+Using radio buttons for multiple options, you can only choose a single option at a time.
+<form>  
+    <label for="gender">Gender: </label>  
+              <input type="radio" id="gender" name="gender" value="male"/>Male  
+              <input type="radio" id="gender" name="gender" value="female"/>Female <br/>  
+</form>  
+Checkbox Control
+The checkbox control is used to check multiple options from given checkboxes.
+
+<form>  
+Hobby:<br>  
+              <input type="checkbox" id="cricket" name="cricket" value="cricket"/>  
+                 <label for="cricket">Cricket</label> <br>  
+              <input type="checkbox" id="football" name="football" value="football"/>  
+                 <label for="football">Football</label> <br>  
+              <input type="checkbox" id="hockey" name="hockey" value="hockey"/>  
+                 <label for="hockey">Hockey</label>  
+</form>  
+
+
+Submit button control
+HTML <input type="submit"> are used to add a submit button on web page. When user clicks on submit button, then form get submit to the server.
+<form>  
+    <label for="name">Enter name</label><br>  
+    <input type="text" id="name" name="name"><br>  
+    <label for="pass">Enter Password</label><br>  
+    <input type="Password" id="pass" name="pass"><br>  
+    <input type="submit" value="submit">  
+</form>  
+
+
+HTML <fieldset> element:
+The <fieldset> element in HTML is used to group the related information of a form. This element is used with <legend> element which provide caption for the grouped elements.
+<form>  
+     <fieldset>  
+      <legend>User Information:</legend>  
+    <label for="name">Enter name</label><br>  
+<input type="text" id="name" name="name"><br>  
+<label for="pass">Enter Password</label><br>  
+<input type="Password" id="pass" name="pass"><br>  
+<input type="submit" value="submit">  
+</fieldset>  
+lt;/form>  
+
+
+<!DOCTYPE html>  
+ <html>  
+ <head>  
+  <title>Form in HTML</title>  
+</head>  
+ <body>  
+     <h2>Registration form</h2>  
+    <form>  
+      <fieldset>  
+        <legend>User personal information</legend>  
+        <label>Enter your full name</label><br>  
+        <input type="text" name="name"><br>  
+         <label>Enter your email</label><br>  
+         <input type="email" name="email"><br>  
+         <label>Enter your password</label><br>  
+         <input type="password" name="pass"><br>  
+         <label>confirm your password</label><br>  
+         <input type="password" name="pass"><br>  
+         <br><label>Enter your gender</label><br>  
+         <input type="radio" id="gender" name="gender" value="male"/>Male  <br>  
+         <input type="radio" id="gender" name="gender" value="female"/>Female <br/>    
+         <input type="radio" id="gender" name="gender" value="others"/>others <br/>   
+          <br>Enter your Address:<br>  
+         <textarea></textarea><br>  
+         <input type="submit" value="sign-up">  
+     </fieldset>  
+  </form>  
+ </body>  
+</html>  
+=================================================================================================================================
+
+HTML style using CSS
+Let's suppose we have created our web page using a simple HTML code, and we want something which can present our page in a correct format, and visibly attractive. So to do this, we can style our web page with CSS (Cascading Stylesheet) properties.
+
+CSS is used to apply the style in the web page which is made up of HTML elements. It describes the look of the webpage.
+
+CSS provides various style properties such as background color, padding, margin, border-color, and many more, to style a webpage.
+
+Each property in CSS has a name-value pair, and each property is separated by a semicolon (;).
+
+<body style="text-align: center;">  
+      <h2 style="color: red;">Welcome to CSS Corp</h2>  
+      <p style="color: blue; font-size: 25px; font-style: italic ;">This is a great place to work. </p>  
+</body>  
+
+Three ways to apply CSS
+To use CSS with HTML document, there are three ways:
+
+Inline CSS: Define CSS properties using style attribute in the HTML elements.
+Internal or Embedded CSS: Define CSS using <style> tag in <head> section.
+External CSS: Define all CSS property in a separate .css file, and then include the file with HTML file using tag in section.
+
+
+Inline CSS:
+Inline CSS is used to apply CSS in a single element. It can apply style uniquely in each element.
+
+To apply inline CSS, you need to use style attribute within HTML element. We can use as many properties as we want, but each property should be separated by a semicolon (;).
+<h3 style="color: red;  
+            font-style: italic;  
+            text-align: center;  
+            font-size: 50px;  
+            padding-top: 25px;">Learning HTML using Inline CSS</h3>  
+
+
+nternal CSS:
+An Internal stylesheets contains the CSS properties for a webpage in <head> section of HTML document. To use Internal CSS, we can use class and id attributes.
+
+We can use internal CSS to apply a style for a single HTML page.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+                  <style>  
+      /*Internal CSS using element name*/  
+            body{background-color:lavender;  
+             text-align: center;}  
+             h2{font-style: italic;  
+              font-size: 30px;  
+              color: #f08080;}  
+            p{font-size: 20px;}  
+        /*Internal CSS using class name*/  
+            .blue{color: blue;}  
+            .red{color: red;}  
+            .green{color: green;}  
+      </style>  
+    </head>  
+  <body>  
+   <h2>Learning HTML with internal CSS</h2>  
+    <p class="blue">This is a blue color paragraph</p>  
+    <p class="red">This is a red color paragraph</p>  
+    <p class="green">This is a green color paragraph</p>  
+  </body>  
+</html>  
+
+
+External CSS:
+An external CSS contains a separate CSS file which only contains style code using the class name, id name, tag name, etc. We can use this CSS file in any HTML file by including it in HTML file using <link> tag.
+
+If we have multiple HTML pages for an application and which use similar CSS, then we can use external CSS.
+There are two files need to create to apply external CSS
+
+First, create the HTML file
+Create a CSS file and save it using the .css extension (This file only will only contain the styling code.)
+Link the CSS file in your HTML file using tag in header section of HTML document.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <link rel="stylesheet" type="text/css" href="style.css">  
+    </head>  
+  <body>  
+   <h2>Learning HTML with External CSS</h2>  
+    <p class="blue">This is a blue color paragraph</p>  
+    <p class="red">This is a red color paragraph</p>  
+    <p class="green">This is a green color paragraph</p>  
+  </body>  
+</html>  
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+CSS File
+=========
+
+
+body{
+background-color:lavender;
+text-align: center;
+}
+h2{
+font-style: italic;
+size: 30px;
+color: #f08080;
+}
+p{
+font-size: 20px;
+}
+
+.blue{
+color: blue;
+}
+.red{
+color: red;
+}
+.green{
+color: green;
+}
+
+HTML Classes
+================
+The HTML class attribute is used to specify a single or multiple class names for an HTML element. The class name can be used by CSS and JavaScript to do some tasks for HTML elements. You can use this class in CSS with a specific class, write a period (.) character, followed by the name of the class for selecting elements.
+
+A class attribute can be defined within <style> tag or in separate file using the (.) character.
+
+In an HTML document, we can use the same class attribute name with different elements.
+
+Defining an HTML class
+To create an HTML class, firstly define style for HTML class using <style> tag within <head> section as following example:
+<head>  
+    <style>  
+        .headings{   
+            color: lightgreen;  
+            font-family: cursive;  
+            background-color: black; }  
+    </style>  
+</head>  
+We have define style for a class name "headings", and we can use this class name with any of HTML element in which we want to provide such styling. We just need to follow the following syntax to use it.
+
+<style>    
+.fruit {    
+    background-color: orange;    
+    color: white;    
+    padding: 10px;    
+}     
+</style>    
+    
+<h2 class="fruit">Mango</h2>    
+<p>Mango is king of all fruits.</p>    
+    
+<h2 class="fruit">Orange</h2>    
+<p>Oranges are full of Vitamin C.</p>    
+    
+<h2 class="fruit">Apple</h2>    
+<p>An apple a day, keeps the Doctor away.</p>    
+
+Note: You can use class attribute on any HTML element. The class name is case-sensitive.
+You can use multiple class names (more than one) with HTML elements. These class names must be separated by a space.
+
+<!DOCTYPE html>    
+<html>    
+<style>    
+.fruit {    
+    background-color: orange;    
+    color: white;    
+    padding: 10px;    
+}     
+    
+.center {    
+    text-align: center;    
+}    
+</style>    
+<body>    
+    
+<h2>Multiple Classes</h2>    
+<p>All three elements have the class name "fruit". In addition, Mango also have the class name "center", which center-aligns the text.</p>    
+    
+<h2 class="fruit center">Mango</h2>    
+<h2 class="fruit">Orange</h2>    
+<h2 class="fruit">Apple</h2>    
+    
+</body>    
+</html>    
+
+Same class with Different Tag <p class="fruit">Mango is the king of all fruits.</p>   
+=================================================================================================================================================
+
+HTML Id Attribute
+The id attribute is used to specify the unique ID for an element of the HTML document. It allocates the unique identifier which is used by the CSS and the JavaScript for performing certain tasks.
+Note: In the Cascading Style sheet (CSS), we can easily select an element with the specific id by using the # symbol followed by id.
+Example 1: The following example describes how to use the id attribute in CSS document:
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title>  
+Example of Id attribute in CSS  
+</title>  
+<style>  
+#Cars {  
+padding: 40px;  
+background-color: lightblue;  
+color: black;      
+text-align: center;  
+}   
+  
+#Bikes  
+{  
+padding: 50px;  
+background-color: lightGreen;  
+text-align: center;  
+}  
+</style>  
+</head>  
+<body>  
+<p> Use CSS to style an element with the id: </p>  
+<h1 id="Cars"> Cars </h1>  
+<h1 id="Bikes"> Bikes </h1>  
+</body>  
+</html>   
+Note: JavaScript can access an element with the given ID by using the getElementById() method.
+<!DOCTYPE html>  
+<html>   
+<head>   
+<title> Date Attribute </title>   
+<script>   
+function viewdate() {   
+var x = document.getElementById("dob").value;   
+document.getElementById("demo").innerHTML = x;   
+</script>   
+</head>   
+<body>   
+Employee Name: <input type="text" placeholder="Your Good name"/>   
+<br>  
+<br>  
+Date of Joining:   
+<input type="date" id="dob">  
+<br>   
+<button onclick="viewdate()"> Submit   
+</button>   
+<br>  
+<h2 id="demo"> </h2>   
+</body>   
+</html>  
+
+HTML iframes
+HTML Iframe is used to display a nested webpage (a webpage within a webpage). The HTML <iframe> tag defines an inline frame, hence it is also called as an Inline frame.
+
+An HTML iframe embeds another document within the current HTML document in the rectangular region.
+
+The webpage content and iframe contents can interact with each other using JavaScript.
+
+Iframe Syntax
+An HTML iframe is defined with the <iframe> tag:<iframe src="URL"></iframe>  
+ere, "src" attribute specifies the web address (URL) of the inline frame page.
+
+Set Width and Height of iframe
+You can set the width and height of iframe by using "width" and "height" attributes. By default, the attributes values are specified in pixels but you can also set them in percent. i.e. 50%, 60% etc.
+
+Example: (Pixels)
+<!DOCTYPE html>    
+<html>    
+<body>    
+<h2>HTML Iframes example</h2>    
+<p>Use the height and width attributes to specify the size of the iframe:</p>    
+<iframe src="https://www.google.com/" height="300" width="400"></iframe>    
+</body>    
+</html>  
+
+Embed YouTube video using iframe
+You can also add a YouTube video on your webpage using the <iframe> tag. The attached video will be played at your webpage and you can also set height, width, autoplay, and many more properties for the video.
+
+Following are some steps to add YouTube video on your webpage:
+
+Goto YouTube video which you want to embed.
+Click on SHARE ➦ under the video.
+Click on Embed <> option.
+Copy HTML code.
+Paste the code in your HTML file
+Change height, width, and other properties (as per requirement).
+
+HTML <script> Tag
+The HTML <script> tag is used to specify a client-side script. It may be an internal or external JavaScript which contains scripting statements, hence we can place <script> tag within <body> or <head> section.
+
+It is mainly used to manipulate images, form validation and change content dynamically. JavaScript uses document.getElementById() method to select an HTML element.
+
+HTML Comments
+Comments are some text or code written in your code to give an explanation about the code, and not visible to the user. Comments which are used for HTML file are known as HTML comments. Anything written between these tags will be ignored by the browser, so comments will not be visible on the webpage.
+
+Comments of any code make code easy to understand and increase readability of code.
+
+Comments are also part of the code, which gives an explanation of the code.
+
+How to add comment In HTML
+You can add comments in your HTML file using <! -- ... --> tag. So if you will write anything between theses comment tag that will be treated as comment and browser will not read it.
+
+<!---  
+Your code is commented.   
+Write description of code.  
+It will not display at webpage.   
+-->  
+
+
+HTML Layouts
+HTML layouts provide a way to arrange web pages in well-mannered, well-structured, and in responsive form or we can say that HTML layout specifies a way in which the web pages can be arranged. Web-page layout works with arrangement of visual elements of an HTML document.
+
+Web page layout is the most important part to keep in mind while creating a website so that our website can appear professional with the great look. You can also use CSS and JAVASCRIPT based frameworks for creating layouts for responsive and dynamic website designing.
+
+
+
+<header>: It is used to define a header for a document or a section.
+<nav>: It is used to define a container for navigation links
+<section>: It is used to define a section in a document
+<article>: It is used to define an independent self-contained article
+<aside>: It is used to define content aside from the content (like a sidebar)
+<footer>: It is used to define a footer for a document or a section
+<details>: It is used to define additional details
+<summary>: It is used to define a heading for the <details> element
+NOTE: HTML layouts create an individual space for every part of the web page. So that every element can arrange in a significant order.
+
+Description of various Layout elements
+HTML <header>
+The <header> element is used to create header section of web pages. The header contains the introductory content, heading element, logo or icon for the webpage, and authorship information.
+
+Example:
+<header style="background-color: #303030;  height: 80px; width: 100%">  
+      <h1 style="font-size: 30px; color: white;text-align: center; padding-top: 15px;">Welcome to     MyFirstWebpage</h1>  
+   </header>  
+HTML <nav>
+The <nav> elements is a container for the main block of navigation links. It can contain links for the same page or for other pages.
+
+Example:
+<nav style="background-color:#bcdeef;">  
+        <h1 style="text-align: center;">Navgation Links</h1>  
+        <ul>  
+            <li><a href="#">link1</a></li>  
+            <li><a href="#">link2</a></li>  
+            <li><a href="#">link3</a></li>  
+            <li><a href="#">link4</a></li>  
+        </ul>  
+    </nav>  
+Test it Now
+HTML <section>
+HTML <section> elements represent a separate section of a web page which contains related element grouped together. It can contain: text, images, tables, videos, etc.
+
+Example:
+<section style="background-color:#ff7f50; width: 100%; border: 1px solid black;">  
+    <h2>Introduction to HTML</h2>  
+    <p>HTML is a markup language which is used for creating attractive web pages with the help of styling, and which looks in a nice format on a web browser..</p>  
+  </section>  
+Test it Now
+HTML <article>
+The HTML
+
+tag is used to contain a self-contained article such as big story, huge article, etc.
+Example:
+<article style="width: 100%; border:2px solid black; background-color: #fff0f5;">  
+    <h2>History of Computer</h2>  
+    <p>Write your content here for the history of computer</p>  
+</article>  
+Test it Now
+HTML <aside>
+HTML <aside> define aside content related to primary content. The <aside> content must be related to the primary content. It can function as side bar for the main content of web page.
+
+Example:
+<aside style="background-color:#e6e6fa">  
+    <h2>Sidebar information</h2>  
+    <p>This conatins information which will represent like a side bar for a webpage</p>  
+  </aside>  
+ 
+HTML <footer>
+HTML <footer> element defines the footer for that document or web page. It mostly contains information about author, copyright, other links, etc.
+
+Example:
+<footer style="background-color: #f0f8ff; width: 100%; text-align: center;">  
+    <h3>Footer Example</h3>  
+    <p>© Copyright 2018-2020. </p>  
+</footer>  
+ 
+HTML <details>
+HTML <details> element is used to add extra details about the web page and use can hide or show the details as per requirement.
+
+Example:
+<details style="background-color: #f5deb3">  
+    <summary>This is visible section: click to show other details</summary>  
+    <p>This section only shows if user want to see it. </p>  
+ </details>  
+ 
+HTML <summary>
+HTML <summary> element is used with the <details> element in a web page. It is used as summary, captions about the content of <details> element.
+
+Example:
+<details>  
+    <summary>HTML is acronym for?</summary>  
+    <p style="color: blue; font-size: 20px;">Hypertext Markup Language</p>  
+ </details>  
+
+HTML Layout Techniques
+Creating layouts are the most important things while designing a website, as it will ensure that your website looks in a well-arranged way and the content appears easy to understand. There are various techniques, and frameworks available for creating layouts, but here we will learn about simple techniques. You can use the following methods to create multicolumn layouts:
+
+HTML tables (Try not to use)
+CSS float property
+CSS framework
+CSS flexbox
+Layout using div
+
+CSS Frameworks
+CSS provides many frameworks like W3.CSS, Bootstrap, and many more, to create your layout fast. Using CSS frameworks you can easily create a responsive and attractive web layout. You just need to add a link for these frameworks, and you can use all properties available in the framework.
+
+CSS Float
+You can create an entire web layout using CSS float property.
+
+Advantage: It is very easy to learn and use. You just learn how the float and clear properties work.
+
+Disadvantage: Floating elements are tied to the document flow, which may harm the flexibility.
+
+Example:
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+div.container {  
+    width: 100%;  
+    border: 1px solid gray;  
+}  
+  
+header, footer {  
+    padding: 1em;  
+    color: white;  
+    background-color: #000080;  
+    clear: left;  
+    text-align: center;  
+}  
+  
+nav {  
+    float: left;  
+    max-width: 160px;  
+    margin: 0;  
+    padding: 1em;  
+}  
+  
+nav ul {  
+    list-style-type: none;  
+    padding: 0;  
+}  
+  
+nav ul a {  
+    text-decoration: none;  
+}  
+  
+article {  
+    margin-left: 170px;  
+    border-left: 1px solid gray;  
+    padding: 1em;  
+    overflow: hidden;  
+}  
+</style>  
+</head>  
+<body>  
+  
+<div class="container">  
+  
+<header>  
+<h1>Tutorials Gallery</h1>  
+</header>  
+  
+<nav>  
+<ul>  
+<li><a href="#">HTML</a></li>  
+<li><a href="#">CSS</a></li>  
+<li><a href="#">JavaScript</a></li>  
+</ul>  
+</nav>  
+<article>  
+<h1>HTML</h1>  
+<p>HTML tutorial or HTML 5 tutorial provides basic and advanced concepts of html. Our HTML tutorial is   
+developed for beginners and professionals.</p>  
+<p>TML is an acronym which stands for Hyper Text Markup Language. Let's see what is Hyper Text and what is Markup Language?</p>  
+</article>  
+<footer>Copyright © javatpoint.com</footer>  
+</div>  
+</body>  
+</html>  
+Test it Now
+CSS Flexbox
+Flexbox is a new layout mode in CSS3.
+
+Advantage: It ensures that the page layout must accommodate different screen sizes and different display devices.
+
+Disadvantages: It does not work in IE10 and earlier.
+
+Example:
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+.flex-container {  
+    display: -webkit-flex;  
+    display: flex;    
+    -webkit-flex-flow: row wrap;  
+    flex-flow: row wrap;  
+    text-align: center;  
+}  
+  
+.flex-container > * {  
+    padding: 15px;  
+    -webkit-flex: 1 100%;  
+    flex: 1 100%;  
+}  
+  
+.article {  
+    text-align: left;  
+}  
+  
+header {background: #000080;color:white;}  
+footer {background: #000080;color:white;}  
+.nav {background:#eee;}  
+  
+.nav ul {  
+    list-style-type: none;  
+    padding: 0;  
+}  
+.nav ul a {  
+    text-decoration: none;  
+}  
+  
+@media all and (min-width: 768px) {  
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}  
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}  
+    footer {-webkit-order:3;order:3;}  
+}  
+</style>  
+</head>  
+<body>  
+  
+<div class="flex-container">  
+<header>  
+<h1>City Gallery</h1>  
+</header>  
+  
+<nav class="nav">  
+<ul>  
+<li><a href="#">HTML</a></li>  
+<li><a href="#">CSS</a></li>  
+<li><a href="#">JavaScript</a></li>  
+</ul>  
+</nav>  
+  
+<article class="article">  
+<h1>HTML</h1>  
+<p>HTML tutorial or HTML 5 tutorial provides basic and advanced concepts of html. Our HTML tutorial is   
+developed for beginners and professionals.</p>  
+<p>TML is an acronym which stands for Hyper Text Markup Language. Let's see what is Hyper Text and what is Markup Language?</p>  
+<p><strong>Resize this page to see what happens!</strong></p>  
+</article>  
+  
+<footer>Copyright © csscorp.com</footer>  
+</div>  
+  
+</body>  
+</html>  
+ 
+
+
+Layout using div
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Webpage using div</title>  
+    <style>  
+        body{  
+            margin:0px;  
+        }  
+        .header{  
+                padding: 10px;  
+                background-color:#455e64;  
+                text-align: center;  
+               }  
+          .header h2{  
+            color: black; }  
+              /*===============[Nav CSS]==========*/  
+              .nav{  
+                background-color:#243238;  
+                padding: 5px;  
+                }  
+               
+              .nav li{  
+              list-style: none;  
+              display: inline-block;  
+              padding: 8px;  
+               }  
+           .nav a{  
+            color: #fff;  
+           }  
+             
+          .nav ul li a:hover{  
+            text-decoration: none;  
+            color: #7fffd4;  
+           }  
+              .lside{  
+                 float: left;  
+               width: 80%;  
+               min-height: 440px;  
+               background-color: #f0f8ff;  
+               text-align: center;  
+              }  
+           .rside  
+           {  
+            text-align: center;  
+            float: right;  
+            width: 20%;  
+              min-height: 440px;  
+             background-color:  #c1cdcd;  
+           }  
+           .footer{  
+             height: 44px;  
+                background-color:#455e64;   
+            text-align: center;   
+            padding-top: 10px;}  
+  
+            .footer p{  
+                color:  #8fbc8f;  
+            }  
+  
+    </style>  
+</head>  
+<body>  
+<div>  
+    <div class="header">  
+      <h2>javaTpoint Div Layout</h2>  
+    </div>  
+            <!-- Nav -->  
+        <div class="nav">  
+            <ul>  
+                <li><a href="#">HOME</a></li>  
+                <li><a href="#">MENU</a></li>  
+                <li><a href="#">ABOUT</a></li>  
+                <li><a href="#">CONTACT</a></li>  
+                <li style="float: right;"><a href="#">LOGIN</a></li>  
+                <li style="float: right;"><a href="#">SIGN-UP</a></li>  
+            </ul>  
+        </div>  
+       
+      <!-- main -->  
+        <div style="height:440px">  
+            <div class="lside">     
+                <p>Write your content here</p>  
+            </div>  
+        <!-- side -->  
+            <div class="rside">  
+                <p>This is side</p>  
+            </div>  
+        </div>  
+      <!-- footer -->  
+       <div class="footer">  
+        <p>©<strong>Copyright javaTpoint.com</strong></p>  
+    </div>      
+ </div>  
+</body>  
+</html>  
+
